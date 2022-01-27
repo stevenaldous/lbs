@@ -1,0 +1,157 @@
+///////////////////////////////////////////////////////////////////////////////////
+// This file contains all the styles for the flex fields. 
+// Will do my best to keep out global styles...
+///////////////////////////////////////////////////////////////////////////////////
+// breadcrumbs
+#breadcrumbs {
+	font-size: 0.8rem;
+	@include f1_light();
+	a {
+		@include f1_light();
+		font-size: inherit;
+		&:hover, &:focus {
+			color: $c_mb2;
+		}
+	}
+}
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+/* PRICE TABLES AND FLEX TABLES
+/* ARE ALL IN 
+/* sass/theme/_tables.scss
+/* !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+// FF title styles 
+.flex-title .mbsa-color {
+	color: $c_mb3;
+}
+
+// Text Flex Field
+.flex-text {
+	.collapse:not(.show) {
+		display: block;
+		height: 25vh;
+		overflow: hidden;
+	}
+	.collapsing {
+	  height: 25vh;
+	}
+	.no-btn[aria-expanded="true"]{
+		content: "Read Less";
+	}
+	@media (min-width: $d_md){
+		.collapse:not(.show) {
+			display: block;
+			height: 100%;;
+		}
+		.no-btn {
+			display: none;;
+		}
+	}
+}
+
+
+// fine print styles
+.flex-fineprint p{
+	font-size: 0.7rem;
+	line-height: 1.1rem;
+}
+// Lesson Package styles
+.flex-package {
+	.pack-card {
+		border: solid 1px rgba($c_mb2, 0.2);
+		.card-body {
+			border-top: solid 1px rgba($c_mb2, 0.2);
+		}
+	}
+	.price {
+		@include f1_bold();
+		font-size: 1.5rem;
+		font-style: italic;
+	}
+	.tax {
+		font-size: 0.7rem;
+	}
+}
+
+
+
+// FAQs styles
+.flex-faqs {
+	button {
+		color: $black;
+	}
+}
+
+
+
+// partner styles
+.cpt-partner {
+	.gallery-wrap .ratio-1x1 {
+		max-width: 100px;
+	}
+}
+body.page-template-partners {
+	.partner-spacer:last-of-type {
+		background: red;
+		display: none;
+	}
+}
+
+
+
+
+// Flex Lightbox Styles
+.flex-lightbox {
+	.gallery-wrap {
+		button { 
+			max-width: 100px;
+			@media(min-width: $d_md) {
+				max-width: 125px;
+			}
+			@media(min-width: $d_md) {
+				max-width: 150px;
+			}
+		}
+	}
+}
+@media (min-width: $d_md) {
+	.modal-lightbox .copy-wrap.d-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+}
+
+
+
+
+
+
+// Flex Photo Essay Styles
+.flex-photoessay {
+	.pe-card {
+		.cap {
+			font-size: 0.9rem;;
+		}
+		.btn {
+			color: $white;
+			font-size: 0.8rem;
+			outline: none !important;
+			&:focus, &:focus-within, &:focus-visible, &:active, &:visited {
+				outline: 0 !important;
+				outline-color: transparent !important;
+			}
+		}
+
+
+		.card-foot {
+			background: $black;
+			color: $white;
+		}
+	}
+}

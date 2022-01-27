@@ -1,0 +1,50 @@
+///////////////////////////////////////////////////////////////////////////////////
+// This file contains all the sidebar styles
+///////////////////////////////////////////////////////////////////////////////////
+
+.sb-nav {
+	a.nav-link, a.dropdown-item {
+		padding-left: 0;
+	} 
+	a.dropdown-item {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	// a.collapse-toggle {
+	// 	nav-icon {
+	// 		padding-left: 0.5rem;
+	// 		i {
+	// 			@include transition(all 500ms);
+	// 		}
+	// 	}
+	// 	// rotate icon on expand
+	// 	&[aria-expanded="true"] {
+	// 		nav-icon i {
+	// 			@include transform( rotate(180deg) );
+	// 		}
+	// 	}
+	// }
+	.current_page_item a {
+		@include f1_sbold();
+	}
+	
+	//apply margin to the bottom of all top level <li>, and not second tier
+	> div > ul > li.nav-item {
+		margin-bottom: 0.5rem;
+	}
+
+
+	//styling for contact info block
+	.lr-contact {
+		.title {
+			font-size: 1rem;
+		}
+		.subt {
+			font-size: 0.8rem;
+		}
+		.ema {
+			@include f1_light();
+
+		}
+	}
+}

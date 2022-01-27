@@ -1,0 +1,35 @@
+// Use this file to set up home page styles, however limited this may be :)
+
+
+// home banner
+.lbs-banner {
+	.title, .subt {
+		color: $white;
+		text-align: center;
+		text-shadow: 5px 5px 10px #000;
+	}
+	.break {
+		width: 45%;
+		border-top: solid 2px $white;
+		box-shadow: 5px 5px 10px #000;
+	}
+}
+.lbs-banner-text {
+	border: solid 1px rgba($c_mb2, 0.7);
+	border-top: none;
+}
+
+// grid card styles
+.g-card {
+	border: solid 1px rgba($c_mb2, 0.2);
+	border-top: none;
+	.copy-wrap {
+		min-height: 150px;
+
+	}
+}
+@media (min-width: $d_lg) {
+	.g-card .copy-wrap .title {
+		font-size: 1.25rem;
+	}
+}

@@ -1,0 +1,72 @@
+// Footer styles for the MBSA site
+
+
+
+.foot-bar {
+	height: 30px;
+	width: 100%;
+	margin-top: auto !important
+}
+
+
+// main footer wrapper (menus)
+#wrapper-footer-full {
+	a, p {
+		color: $white;
+		@include f1_sbold();
+		font-size: 0.875rem;
+	}
+	background-color: $black;
+	color: $c_mb1;
+	a.nav-link, a.pho {
+		padding: 0.25rem;
+		color: $white;
+		text-transform: uppercase;
+		&:hover, &:focus {
+			color: $c_mb1;
+		}
+	}
+	.social.inline {
+		a {
+			font-size: 1.5rem;
+			color: $white;
+			&:hover, &:focus {
+				color: $c_mb1;
+			}
+		}
+	}
+}
+.linked-image img {
+	max-width: 125px;
+}
+.site-info {
+	color: $white;
+	font-size: 0.8rem;
+	img {
+		max-width: 40px;
+	}
+}
+
+#copyright{
+	.address {
+		a {
+			color: $black;
+			&:hover, &:focus {
+				color: $c_mb1;
+			}
+		}
+	}
+	.copyright {
+		p, a {
+			@include f1_reg();
+			color: $black;
+			font-size: 0.8rem;
+		}
+		a:hover, a:focus {
+			color: $c_mb1;
+		}
+		&.ad-text p {
+			color: lighten($c_mb2, 60%)
+		}
+	}
+}

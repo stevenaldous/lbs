@@ -1,0 +1,297 @@
+///////////////////////////////////////////////////////////////////////////////////
+// HEADING STYLES /////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+
+} 
+h1 {
+	@include f1_bold();
+
+	@media(min-width: $d_md ) {
+
+	}
+	@media(min-width: $d_lg ) {
+		font-size: 2.5rem;
+	}
+	em {
+		@include f1_light();
+	}
+}
+h2 {
+	@include f1_sbold();
+	@media(min-width: $d_md ) {
+		
+	}
+	@media(min-width: $d_lg ) {
+		font-size: 1.875rem;
+	}
+}
+h3 {
+	@include f1_sbold();
+	@media(min-width: $d_md ) {
+		
+	}
+	@media(min-width: $d_lg ) {
+		font-size: 1.5rem;
+	}
+}
+h4,h5,h6 {
+	@include f1_reg();
+	@media(min-width: $d_md ) {
+		
+	}
+	@media(min-width: $d_lg ) {
+		font-size: 1.1rem;
+	}
+}
+.h1 {
+	
+	@media(min-width: $d_md ) {
+
+	}
+	@media(min-width: $d_lg ) {
+		font-size: 2.5rem;
+	}
+}
+.h2 {
+	
+	@media(min-width: $d_md ) {
+		
+	}
+	@media(min-width: $d_lg ) {
+		font-size:1.875rem;
+	}
+}
+.h3 {
+	
+	@media(min-width: $d_md ) {
+		
+	}
+	@media(min-width: $d_lg ) {
+		font-size: 1.5rem;
+	}
+}
+.h4,.h5,.h6 {
+	
+	@media(min-width: $d_md ) {
+		
+	}
+	@media(min-width: $d_lg ) {
+		font-size: 1.1rem;
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// TEXT STYLES ////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+p.two-col {
+	column-count: 2;
+}
+.text-muted {
+	font-size: 1rem;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+// LISTS //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+ul.inline {
+	list-style: none;
+	padding: 0;
+	li {
+		display: inline;
+	}
+}
+ul.clean{
+	list-style: none;
+	padding: 0;
+}
+ul.bold {
+	li {
+		font-weight: 600;
+	}
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// LINKS ///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+a {
+	color: $c_mb3;
+	@include f1_sbold();
+	&hover, &:focus {
+		color:  $black;
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// BUTTONS ////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+$bgap: 8px;
+
+.btn {
+	border: none;
+	@include border-radius( 0 );
+	font-size: 1rem;
+	padding: 0.5rem 2rem;
+	text-transform: uppercase;
+	margin: $bgap;
+
+	@include transition(all 500ms);
+
+	@media(min-width: $d_md ) {
+		font-size: 1.125rem;
+	}
+	&.btn-fw {
+		width: calc(100% - calc( #{$bgap} * 2 )  );
+	}
+}
+
+
+
+
+
+
+
+// primary button - Silver Button/ Black Text
+.btn-primary {
+	background: $white ;
+	border: solid 1px $c_mb2;
+
+	// second border
+	box-shadow: 0 0 0 $bgap - 2 $white,
+              0 0 0 $bgap $black;
+
+
+	&:hover, &:focus {
+		background: $black;
+		border-color: $white ;
+		color: $white ;
+
+		// second border
+		box-shadow: 0 0 0 $bgap - 2 $black,
+             0 0 0 $bgap $black;
+	}
+}
+// secondary button - Gold Button/Black Text
+.btn-secondary {
+	color: $black;
+	background: $c_mb1;
+	border: solid 1px $black;
+	// second border
+	box-shadow: 0 0 0 $bgap - 2 $c_mb1,
+    	0 0 0 $bgap $black;
+
+
+	&:hover, &:focus {
+		background: $black;
+		border-color: $c_mb1;
+		color: $c_mb1;
+
+		// second border
+		box-shadow: 0 0 0 $bgap - 2 $black,
+        	0 0 0 $bgap $black;
+
+	}
+}
+
+
+// warning button - Bronze Button/Black Text
+.btn-bronze {
+	background: $c_mb3;
+	border: solid 1px $black;
+	// second border
+	box-shadow: 0 0 0 $bgap - 2 $c_mb3,
+    	0 0 0 $bgap $black;
+
+
+	&:hover, &:focus {
+		background: $black;
+		border-color: $c_mb3;
+		color: $c_mb3;
+
+		// second border
+		box-shadow: 0 0 0 $bgap - 2 $black,
+        	0 0 0 $bgap $black;
+
+	}
+}
+
+// info button - Black Button/White Text
+.btn-black {
+	background: $black;
+	color: $white;
+	border: solid 1px $white;
+	// second border
+	box-shadow: 0 0 0 $bgap - 2 $black,
+    	0 0 0 $bgap $white;
+
+
+	&:hover, &:focus {
+		background: $white;
+		border-color: $black;
+		color: $black;
+
+		// second border
+		box-shadow: 0 0 0 $bgap - 2 $white,
+        	0 0 0 $bgap $white;
+
+	}
+}
+button {
+	background: transparent;
+	&:active, &:visited, &:focus, :focus-visible, &:-webkit-direct-focus {
+		outline-color: rgba($c_mb1, 0.1);
+		outline: none;
+	}
+}
+
+button:focus {outline:0 !important;}
+
+.no-btn {
+	appearance: none;
+	border: none;
+	color: $black;
+	padding: 0.75rem 0;
+	background: transparent;
+	width: 100%;
+	text-align: left;
+	&:hover, &:focus {
+		color: $c_mb1d;
+	}
+	&:active, &:visited, &:focus, :focus-visible, &:-webkit-direct-focus {
+		outline-color: rgba($c_mb1, 0.25);
+		outline: none;
+	}
+}
+
+.btn-rm {
+	font-size: 1rem;
+	text-transform: lowercase;
+	display: inline;
+	appearance: none;
+	border: none;
+	color: $black;
+	padding: 0 0.5rem 0 0;
+	margin: 0;
+	background: transparent;
+	@include f1_reg();
+	color: $c_mb3;
+	&.hide {
+		display: none;
+	}
+}
+
+
+.sbnav-btn {
+	font-size: 0.9rem;
+	.icon-wrap i {
+		@include transition(all ease-in 250ms);
+	}
+	&[aria-expanded='true'] .icon-wrap i {
+		@include transform( rotate(225deg) );
+	}
+}

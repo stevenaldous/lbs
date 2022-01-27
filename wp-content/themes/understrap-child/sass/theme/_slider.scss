@@ -1,0 +1,90 @@
+// MBSA Swiper JS slider styles.
+
+.swiper-container {
+	// style arrows
+	.swiper-button-prev, .swiper-button-next {
+		color: rgba($white, 0.5);
+		outline: none;
+		&:hover, &:focus, &:active, &:visited {
+			color: rgba($white, 1);
+			outline: none;
+		}
+	}
+	// pagination bullet styles
+	.swiper-pagination-bullets {
+		.swiper-pagination-bullet {
+			background: rgba($white, 0.75);
+			height: 0.875rem;
+			width: 0.875rem;
+			&.swiper-pagination-bullet-active {
+				background: rgba($white, 1);
+			}
+		}
+	}
+}
+
+// modal swiper
+.modal-swiper {
+	// arrow styles
+	.swiper-container .swiper-button-next, 
+	.swiper-container .swiper-button-prev {
+		top: 0;
+		height: 100%;
+		width: 60px;
+		&::after {
+			content: '';
+		}
+		i {
+			font-size: 1.25rem;
+			color: rgba($c_mb1, 0.5);
+			@media( min-width: $d_md ) {
+				font-size: 1.75rem;
+			}
+			@media( min-width: $d_lg ) {
+				font-size: 2.25rem;
+			}
+		}
+		&:hover, &:focus {
+			i {
+				color: rgba($c_mb1, 1);
+			}
+		}
+		&:hover, &:focus, &:active, &:visited {
+			outline: none;
+		}
+	}
+	.swiper-container .swiper-button-next {
+		right: 0;
+		i {
+			margin-left: auto;
+			margin-right: 10px;
+		}
+	}
+	.swiper-container .swiper-button-prev {
+		left: 0;
+		i {
+			margin-left: 10px;
+			margin-right: auto;
+		}
+	}
+	.slide-inner img { max-height: 85vh; width: auto;}
+}
+
+
+
+
+
+
+// photo essay slider 
+.pe-swiper {
+	// .slide-inner { max-height: 90vh;}
+
+	.img-wrap.ar-none img.size-full {
+		max-height: 90vh;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: auto;
+	
+	}
+}

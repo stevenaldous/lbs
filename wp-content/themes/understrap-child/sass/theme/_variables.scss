@@ -1,0 +1,68 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+// As example you find one of the most important Bootstrap variable below: $brand-primary.
+// Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
+// Just add your color code here, compile the theme.scss file to change this color everywhere
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// DISPLAY SIZES //////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+$d_xs: 0;
+$d_sm: 576px;
+$d_md: 768px;
+$d_lg: 992px;
+$d_xl: 1200px;
+$d_xxl: 1500px;
+
+///////////////////////////////////////////////
+// Fonts //////////////////////////////////////
+///////////////////////////////////////////////
+$f1: 'Montserrat', sans-serif;
+
+@mixin f1_light() {
+	font-family:  $f1;
+	font-weight: 200;
+}
+@mixin f1_reg() {
+	font-family:  $f1;
+	font-weight: 400;
+}
+@mixin f1_sbold() {
+	font-family:  $f1;
+	font-weight: 500;
+}
+@mixin f1_bold() {
+	font-family:  $f1;
+	font-weight: 700;
+}
+
+///////////////////////////////////////////////
+// Colors //////////////////////////////////////
+///////////////////////////////////////////////
+
+//color variable - currently Gold
+$c_mb1: #FFCC66;
+// $c_mb1d: darken($c_mb1, 20%);
+$c_mb1d: #407F99;
+
+// light gold
+$c_mb1l: #F3E9D1;
+
+//color variable - currently Silver
+$c_mb2: #E3E3E3;
+
+// color variable - Currently Bronze
+$c_mb3: #CC9966;
+
+// set Bootstrap primary color
+$primary: $c_mb1;
+
+//set custom colors for comon sass variables
+$black: #000000;
+$danger: #c60000;
+$red: #d00000;
+
+
+

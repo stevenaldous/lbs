@@ -1,0 +1,28 @@
+/*
+ Theme Name:   UnderStrap Child
+ Theme URI:    https://www.understrap.com
+ Description:  UnderStrap Child Theme
+ Author:       Holger Koenemann
+ Author URI:   http://www.holgerkoenemann.de
+ Template:     understrap
+ Version:      0.5.5
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  understrap-child
+ Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
+ GitHub Theme URI: holger1411/understrap-child
+
+
+ Additional info from developer, Steven Aldous
+
+ To compile JS and CSS run gulp watch. If new to gulp, follow instructions in README.md
+
+    Custom JS - src/js/custom-javascript.js
+    Custom CSS - this file for vanilla CSS or add to them styles managed by SASS at sass/child-theme.scss
+
+ Additional Assets installed to make site functional
+ -- Font Awesome 5.15.3 -> managed via SASS (child-theme.scss)
+ -- Advanced Custom Fields (Plugin in use)
+
+
+*/

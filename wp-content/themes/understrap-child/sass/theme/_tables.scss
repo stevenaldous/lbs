@@ -1,0 +1,302 @@
+///////////////////////////////////////////////////////////////////////////////////
+// This file contains all the styles for tables including the flex fields tables.
+///////////////////////////////////////////////////////////////////////////////////
+
+
+// Price Table styles
+.flex-pricetable, .flex-table {
+	.title {
+		@include f1_sbold();
+	}
+	// .table-wrap {
+	// 	border: solid 1px rgba($c_mb2, 0.2);
+	// }
+	.btn {
+		.icon-wrap i {
+			@include transition(all 250ms);
+		}
+		&.collapsed {
+			.icon-wrap i {
+				@include transform( rotate(180deg) );
+			}
+		}
+	}
+	table {
+		table-layout: fixed;
+		&.table-auto {
+			table-layout: auto;;
+		}
+		th {
+			padding-top: 0;
+			padding-bottom: 0.25rem;
+			@include f1_light();
+			font-size: 0.9rem;
+			border-top: none;
+		}
+		td {
+			padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+			vertical-align: middle;
+		}
+		td.group {
+			@include f1_sbold();
+			font-size: 1.125rem;
+			text-transform: uppercase;
+		}
+		td.price {
+			@include f1_bold();
+			font-size: 1.3rem;
+			.cents {
+				font-size: 0.9rem;
+			}
+		}
+	}
+}
+// Table styles (not inherited from price table above)
+.dataTables_wrapper table,
+.flex-table {
+	td, th {
+		text-align: center;
+	}
+	tr td:first-of-type {
+		text-align: left;
+	}
+
+	.content-center {
+		tr td, th {
+			text-align: center;
+		}
+	}
+	.content-left {
+		tr td, th {
+			text-align: left;
+		}
+
+	}
+	.content-right {
+		tr td, th {
+			text-align: right;
+		}
+	}
+
+
+	table.table-striped.table-hover tbody tr:nth-of-type(even):hover {
+		// background-color: rgba($c_mb1d, 0.4);
+		background-color: rgba(1,2,3,0.02);
+	}
+
+
+	table.table-stripecols tbody tr td:nth-of-type(odd) { 
+		background-color: rgba( $black, 0.05);
+	}
+
+	table.table-hovercols {
+		position: relative;
+		z-index: 3;
+		overflow-y: hidden;
+		td, th {
+			position: relative;
+
+			&:hover::after, &:focus::after {
+				content: '';
+				position: absolute;
+				background-color: rgba( $black, 0.075);
+				left: 0;
+				top: -5000px;
+				height: 10000px;
+				width: 100%;
+				z-index: -1;
+				@include transition( background-color 0.5s ease ) ;
+			}
+		}
+
+		// lighten bg on column hover
+		&.table-stripecols tbody td:nth-of-type(even), 
+		&.table-stripecols tbody th:nth-of-type(even){
+			&:hover::after, &:focus::after {
+				background-color: rgba(1,2,3,0.02);
+			}
+		}
+	}
+
+}
+
+
+//set variable for for th/td width
+$tdw: 75px;
+
+table.tabth-lbs {
+	table-layout: fixed;
+	border-collapse: collapse;
+	width: 100%;
+	tbody {
+		border-top: none;
+	}
+	col:first-of-type {
+		width: 75px;
+	}
+
+	thead tr {
+		th {
+
+			text-transform: uppercase;
+			@include f1_sbold();
+			font-size: 0.9rem;
+			border-bottom: none;
+			border-top: none;
+			text-align: center;
+			vertical-align: middle;
+			&:first-of-type {
+				width: $tdw;
+			}
+			span {
+				display: block;
+				@include f1_reg();
+				font-size: 0.7rem;
+			}
+
+			@media(min-width: $d_md) {
+				font-size: 1rem;
+				span { 
+					font-size: 0.8rem;
+				}
+			}
+			// for dev purposes
+			// border: solid red 1px;
+		}
+	}
+	tbody tr {
+		background-color: rgba($c_mb1, 0.5);
+		td {
+			text-align: left;
+			.collapse {
+				@include transition(all 0.3s);
+			}
+			span {
+				display: inline-block;
+				padding: 0.5rem 0rem 0.5rem 1rem;
+			}
+			&:first-of-type {
+				.collapse span {
+					padding: 0.5rem 0rem 0.5rem 0rem;
+				}
+			}
+		}
+	}
+	&.table-striped tbody tr{
+		td {
+			border-top: none;
+			&:first-of-type {
+				text-align: center;
+				width: $tdw;
+			}
+			// for dev purposes
+			// border: solid red 1px;
+		}
+		&:nth-of-type( odd ) {
+			background-color: rgba( $c_mb1, 0.2 );
+			td:first-of-type {
+				background-color: rgba($c_mb1, 0.4);
+			}
+		}
+	}
+	&.table-striped.table-hover {
+		//dark
+		tbody tr{
+			&:nth-of-type( even ):hover td {
+				background-color: rgba( $c_mb1, 1 );
+			}
+		}
+		// light
+		tbody tr{
+			&:nth-of-type( odd ):hover td {
+				background-color: rgba( $c_mb1, 1 );
+				&:first-of-type {
+					background-color: rgba($c_mb1, 1);
+				}
+			}
+		}
+	}
+}
+
+// accordion styles for honor roll collapse
+.hr-table {
+	.card {
+		border: none;
+	}
+	.card-header {
+		padding: 0;
+		border-top: solid 5px $white;
+		border-bottom: none;
+		background-color: rgba( $black, 0.05);
+		button {
+			margin: none;
+			color: $black;
+			@include f1_sbold();
+		}
+
+	}
+}
+
+
+
+
+ 
+
+// expando method of table collapse 
+.table-coll {
+	tr.shown, tr.hidden {
+		display: table-row;
+	}
+	tr.hidden {
+		display: none;
+	}
+	tr.toggle {
+		border-top: solid 5px $white;
+		.btn {
+			margin: 0;
+		}
+	}
+}
+
+
+
+table.tabth-lbs.table-striped.table-coll tbody {
+	tr.toggle {
+		background-color: transparent;
+
+		td:first-of-type {
+			background-color: transparent ;
+		}
+		&:hover, &:focus {
+			td:first-of-type {
+				background-color: transparent ;
+			}
+		}
+
+		button {
+			@include f1_sbold();
+			background-color: rgba( $black, 0.05);
+			&:hover, &:focus {
+				background-color: rgba( $black, 0.075);
+				color: $black;
+			}
+		}	
+
+
+
+	}
+
+}
+
+
+// data tables
+.dataTables_wrapper {
+	.tablepress {
+		thead th {
+			background-color: rgba(0,0,0,.05);
+			&:hover, &:focus {
+				background-color: rgba(0,0,0,.15);
+			}
+		}
+	}
+}

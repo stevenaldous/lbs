@@ -1,0 +1,57 @@
+// add files to and compile to css/child-theme.css in dev and css/child-theme.min.css for production
+
+
+/////////// understrap Theme Files ///////////
+@import "theme/variables";                   // <------- Theme variables in this file. Also add variables to overwrite Bootstrap variables here
+@import "theme/mixins";						 // <------- Theme mixins here
+@import "assets/bootstrap4";                             // <------- Loads Bootstrap4
+@import "../src/sass/understrap/understrap/understrap";  // <------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
+// @import "../src/sass/understrap/understrap/woocommerce"; // <------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+
+// Optional files - If you don´t use the corresponding scripts/fonts comment em out
+// @import "assets/underscores";                            // <------- Underscores media styles
+
+
+// Font Awesome files //
+@import "../src/sass/fontawesome/fontawesome"; // <------- Font Awesome Icon font - v5.15.3 
+
+//FA5 font weights. Load what is needed
+@import "../src/sass/fontawesome/brands";  // Brands
+@import "../src/sass/fontawesome/solid";  // Solid
+@import "../src/sass/fontawesome/regular";  // Regular
+// @import "../src/sass/fontawesome/light";  // Light
+@import "../src/sass/fontawesome/duotone";  // Duotone
+
+
+
+
+
+
+
+
+
+// Any additional imported files //
+// @import "../src/sass/understrap/theme/contact-form7";    // <------- Loads some basic styling for contact form 7 plugin
+
+
+
+/////////// Library Theme Files ///////////
+@import "theme/styleguide"; 
+@import "theme/typography";   
+@import "theme/forms";
+@import "theme/modals";
+
+
+@import "theme/header";
+@import "theme/sidebar";
+// @import "theme/hero";
+@import "theme/slider";
+@import "theme/home";
+@import "theme/flex";
+@import "theme/tables";
+// @import "theme/blocks";
+
+// @import "theme/sliders"; //enable for some default slider styles
+
+
+@import "theme/footer";

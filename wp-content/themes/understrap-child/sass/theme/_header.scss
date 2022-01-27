@@ -1,0 +1,376 @@
+///////////////////////////////////////////////////////////////////////////////////
+// This file contains all the styles wrapped 
+// in the header.php file including menus/alerts
+///////////////////////////////////////////////////////////////////////////////////
+.alert-btn-wrap {
+
+	&.position-absolute{
+		top: 50%;
+		@include transform(translateY(-50%));
+		right: 10px;
+	}
+	.alert-open {
+		// padding: 0.5rem;
+		font-size: 1.25rem;
+		color: $white;
+		opacity: 0;
+		visibility: hidden;
+		&.show {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.top-banner {
+	color: $white;
+	.title, a {
+		@include f1_sbold();
+	}
+	a {
+		color: $white;
+		&:hover, &:focus {
+			color: $c_mb1d;
+		}
+	}
+	.title {
+		font-size: 1.1rem;
+		@media (min-width: $d_md) {
+			font-size: 1.5rem;
+		}
+		@media (min-width: $d_lg) {
+			font-size: 1.25rem;
+		}
+	}
+}
+
+.tm {
+	a {
+		@include f1_reg();
+		text-transform: uppercase;
+		color: $black;
+		&:hover, &:focus {
+			color: lighten($black, 30%);
+		}
+	}
+	.tml {
+		a {
+			font-size: 1rem;;
+		}
+	}
+	.tmr {
+		font-size: 0.875rem;
+		.dropdown-menu {
+			border: none;
+			background: $c_mb1;
+			a:hover, a:focus {
+				background: $c_mb1;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+// Site Logo Styles
+.navbar-brand {
+	max-width: 125px;
+	@media(min-width: $d_md) {
+		max-width: 200px;
+		margin-right: 50px;
+	}
+	padding: 0 0 10px 0;
+}
+
+
+
+
+// alert banner styles
+.alert-nav {
+	overflow: hidden;
+	.btn-close {
+		position: absolute;
+		right: 0px;
+		top: 10px;
+		z-index: 1000;
+		color: $white;
+	}
+
+
+	.alert-content {
+		@include transition(max-height 1s ease-out);
+		max-height: 800px;
+		overflow: hidden;
+	}
+	&.hide {
+		.alert-content {
+			max-height: 0;
+		}
+	}
+
+
+
+	
+	.title-wrap {
+		color: $yellow;
+	}
+	.copy-wrap {
+		color: $white;
+		font-size: 0.9rem;
+		a {
+			color: $yellow;
+			&:hover, &:focus {
+				color: $white;
+			}
+		}
+	}
+
+
+// alert nav themes
+	// closed 
+	&.theme-dark {
+		
+		.alert-content.bg-dark {
+			// background-color: lighten($dark, 20%) !important;
+			.title-wrap {
+				color: $c_mb1;
+			}
+			.copy-wrap {
+				color: $white;
+				a {
+					color: $c_mb1;
+					&:hover, &:focus {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+	&.theme-danger {
+		
+		.alert-content.bg-danger {
+			.title-wrap {
+				color: $white;
+			}
+			.copy-wrap {
+				color: $white;
+				a {
+					color: $white;
+					&:hover, &:focus {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+	// Advisory
+	&.theme-warning {
+		.btn-close {
+			color: $black;	
+		}
+		.alert-content.bg-warning {
+			.title-wrap {
+				color: $black;
+			}
+			.copy-wrap {
+				color: $dark;
+				a {
+					color: $c_mb2;
+					&:hover, &:focus {
+						color: $black;
+					}
+				}
+			}	
+		}
+	}
+
+	// update theme
+	&.theme-info {
+		.alert-content.bg-info {
+			background-color: $c_mb1d !important;
+			.title-wrap {
+				color: $white;
+			}
+			.copy-wrap {
+				color: $white;
+				a {
+					color: $white;
+					&:hover, &:focus {
+						color: $white;
+					}
+				}
+			}	
+		}
+	}
+
+
+
+}
+
+
+
+
+
+
+
+// Desktop Nav styles
+.baker-nav {
+	background-color: $black;
+
+	@media(min-width: $d_lg) {
+		background-color: rgba( $black, 0.7 );
+	}
+}
+
+// BS4 menu styles
+
+//remove caret
+.dropdown-toggle::after { display: none;}
+.dropdown-toggle nav-icon { padding-left: 0.15rem;}
+
+
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
+
+	> li.mega-menu-item > a.mega-menu-link:not([href]), 
+		li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:not([href]){
+			pointer-events: none;
+		}
+
+
+}
+
+@media (max-width: $d_lg - 1) {
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu,
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
+ 		> li.mega-menu-item > a.mega-menu-link:link, 
+ 		li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:link{
+ 			&:hover, &:focus {
+ 				color: $c_mb1;
+ 			}
+ 		}
+
+
+	}
+}
+
+
+
+// Max Mega Menu Plugin Styles
+@media (min-width: $d_lg) {
+	//desktop colors
+	// mega menu desktop color
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu,
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
+		
+		background: $black;
+		// second tier link color
+		> li.mega-menu-item > a.mega-menu-link, 
+ 		li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link {
+			color: $white;
+			border-bottom: 1px solid $white;
+			&:hover, &:focus {
+				color: $white;
+				// @include f1_sbold();
+				border-bottom: 1px solid $white;
+
+			}
+
+
+		}
+		// if second tier has no children, remove bottom border
+		> li.mega-menu-item:not(.mega-menu-item-has-children) > a.mega-menu-link, 
+ 		li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item:not(.mega-menu-item-has-children) > a.mega-menu-link {
+			border-bottom: none;
+			&:hover, &:focus {				
+				color: $c_mb1;
+			}
+			
+		}
+		// third tier link color
+		> li.mega-menu-item li.mega-menu-item > a.mega-menu-link, 
+		li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item li.mega-menu-item > a.mega-menu-link {
+			color: $white !important;
+			@include f1_reg();
+			&:hover, &:focus {				
+				@include f1_sbold();
+			}
+		}
+
+
+	}
+
+
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+		@include f1_reg();
+		color: $white;
+		font-size: 0.875rem;
+  		
+  		transition: text-shadow .3s;
+  		text-shadow: 0 0 .65px $white, 0 0 .65px $white;
+		&:hover, &:focus {
+			text-shadow: none;
+		}
+
+		// color: $red !important;
+
+	}
+
+	// MEGA MENU flyout (aka regular dropdown)
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
+		background: $black;
+
+		@include f1_reg();
+		color: $white;
+		font-size: 0.875rem;
+
+		transition: text-shadow .3s;
+  		text-shadow: 0 0 .65px #fff, 0 0 .65px #fff;
+
+		&:hover, &:focus {
+			color: $c_mb1;
+			@include f1_reg();
+			text-shadow: none;
+		}
+	}
+
+
+
+}
+
+@media only screen and (max-width: $d_sm + 1 ) {
+	#mega-menu-wrap-primary .mega-menu-toggle.mega-menu-open + #mega-menu-primary {
+	    min-height: 85vh;
+	    margin-top: 15px;
+	}
+}
+
+
+
+
+
+// Ultra wide Desktop width 
+@media (min-width: $d_xxl) {
+	#mega-menu-wrap-primary {
+	flex-grow: 1;
+
+		#mega-menu-primary {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+		color: $white;
+		&:hover, &:focus {
+			color: $c_mb1;
+		}
+	}
+
+}
+
+
+
+

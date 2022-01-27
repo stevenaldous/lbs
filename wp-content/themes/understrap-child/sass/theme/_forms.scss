@@ -1,0 +1,53 @@
+// Gravity Form Styles
+
+
+
+.gform_wrapper {
+	// form content
+	.gform_body {
+		.gfield {
+
+		}
+	}
+	.gform_footer {
+		
+
+		$bgap: 8px;
+		button[type=submit] {
+			background: $white;
+			border: solid 1px $c_mb2;
+			color: $black;
+			@include border-radius( 0 );
+			font-size: 1rem;
+			margin: $bgap;
+			padding: 0.5rem 2rem;
+			text-transform: uppercase;
+			@include transition(all 500ms);
+			// second border
+			box-shadow: 0 0 0 $bgap - 2 $white, 0 0 0 $bgap $black;
+
+			&:hover, &:focus {
+				background: $black;
+				border-color: $white ;
+				color: $white ;
+
+				// second border
+				box-shadow: 0 0 0 $bgap - 2 $black,
+		             0 0 0 $bgap $white;
+			}
+
+			@media(min-width: $d_md ) {
+				font-size: 1.125rem;
+			}
+		}
+
+
+
+	}
+
+
+	
+
+
+
+}
