@@ -24,7 +24,7 @@ if( $sp_query->have_posts() ):
     <div class="col-12">
         <div class="row justify-content-center">
             <?php while($sp_query->have_posts() ): $sp_query->the_post(); ?> 
-                <div class="col-6 col-md-3 col-lg-2">
+                <div class="col-6 col-md-3 col-lg-2 p-0">
                     <?php get_template_part('cpt/sp-flex/logo'); ?>
                 </div>
             <?php  endwhile; wp_reset_postdata(); ?>

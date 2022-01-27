@@ -38,19 +38,19 @@ if( $sp_query->have_posts() ):
 
     switch ($ln) {
         case 'Gold':
-            $col = 'col-12 col-md-6 col-lg-4';
+            $col = 'col-12 col-md-6 col-lg-4 p-0';
             $t = '';
             break;
         case 'Silver':
-            $col = 'col-6 col-md-3 col-lg-3';
+            $col = 'col-6 col-md-3 col-lg-3 p-0';
             $t = ' t-80';
             break;
         case 'Bronze':
-            $col = 'col-4 col-md-3 col-lg-2';
+            $col = 'col-4 col-md-3 col-lg-2 p-0';
             $t = ' t-60';
             break;
         default:
-            $col = 'col-3 col-md-2 col-lg-2';
+            $col = 'col-3 col-md-2 col-lg-2 p-0';
             $t = ' t-40';
     }
 

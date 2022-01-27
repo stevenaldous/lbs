@@ -16,7 +16,7 @@ if( $post ):
 
 
 ?>
-<div class="col-12 col-md-4">
+<div class="col-12 col-md-4 mx-auto p-0">
     <?php get_template_part('cpt/sp-flex/logo'); ?>
 </div>
 <?php wp_reset_postdata(); endif; ?>
