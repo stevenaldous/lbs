@@ -11,6 +11,6 @@ defined( 'ABSPATH' ) || exit;
 $type = get_sub_field('sp_type');
 
 
-get_template_part('cpt/sp-flex/sp', $type); 
+get_template_part('cpt/sp-flex/sp', $type);
 
 ?>

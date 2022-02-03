@@ -62,11 +62,11 @@ if( $sp_query->have_posts() ):
             </div>
         <?php endif; ?>
         <div class="row justify-content-center">
-            <?php while($sp_query->have_posts() ): $sp_query->the_post(); ?> 
+            <?php while($sp_query->have_posts() ): $sp_query->the_post(); ?>
                 <div class="<?php echo $col . $t; ?>">
                     <?php get_template_part('cpt/sp-flex/logo'); ?>
                 </div>
             <?php  endwhile; wp_reset_postdata(); ?>
-        </div>  
+        </div>
     </div>
 <?php endif; ?>
