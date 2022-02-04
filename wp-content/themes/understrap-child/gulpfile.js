@@ -242,3 +242,4 @@ gulp.task( 'dist-product', gulp.series('clean-dist-product', function copyToDist
 
 // Deleting any file inside the /dist-product folder
 gulp.task( 'compile', gulp.series( 'styles', 'scripts', 'dist' ));
+
