@@ -2,6 +2,9 @@
 var gulp = require( 'gulp' );
 var plumber = require( 'gulp-plumber' );
 var sass = require( 'gulp-sass' );
+
+//var sass = require('gulp-sass')(require('sass'));
+
 var cssnano = require( 'gulp-cssnano' );
 var rename = require( 'gulp-rename' );
 var concat = require( 'gulp-concat' );
@@ -242,4 +245,3 @@ gulp.task( 'dist-product', gulp.series('clean-dist-product', function copyToDist
 
 // Deleting any file inside the /dist-product folder
 gulp.task( 'compile', gulp.series( 'styles', 'scripts', 'dist' ));
-

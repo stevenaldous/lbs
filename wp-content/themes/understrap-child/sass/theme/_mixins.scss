@@ -40,3 +40,10 @@
   -o-transform-style: $v;
   transform-style: $v;
 }
+
+@mixin mw( $w ) {
+  webkit-box-flex: 0;
+  -ms-flex: 0 0 $w;
+  flex: 0 0 $w;
+  max-width: $w;
+}

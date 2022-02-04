@@ -158,15 +158,37 @@ body.page-template-partners {
 
 
 // Sponosor level Backgrounds
-.bg-gold {
-	background-color: #FFCC66;
+.level-gold {
+	background-color: rgba( #FFCC66 , 0.8 );
+	.col {
+		@include mw(50%);
+		@media (min-width: $d_lg) {
+			@include mw(33.3%);
+		}
+	}
 }
-.bg-silver {
-	background-color: #CCCCCC;
+.level-silver {
+	background-color: rgba( #CCCCCC , 0.8 );
+	.col {
+		@include mw(33.3%);
+		@media (min-width: $d_lg) {
+			@include mw(25%);
+		}
+	}
 }
-.bg-bronze {
-	background-color: #CC9966;
+.level-bronze {
+	background-color: rgba( #CC9966 , 0.8 );
+	.col {
+		@include mw(25%);
+		@media (min-width: $d_lg) {
+			@include mw(20%);
+		}
+	}
 }
-.bg-duct-tape {
-	background-color: #999999;
+.level-duct-tape {
+	background-color: rgba( #999999 , 0.8 );
+	.col {
+		@include mw(20%);
+	}
 }
+

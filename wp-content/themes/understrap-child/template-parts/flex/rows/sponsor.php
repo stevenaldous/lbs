@@ -14,7 +14,7 @@
 	if( $type == 'level') {
 		$lid = get_sub_field('sp_level');
 		$level = get_term( $lid, 'sponsor_category');
-		$ls = ' bg-' . $level->slug;
+		$ls = ' level-' . $level->slug;
 	}
 
 	

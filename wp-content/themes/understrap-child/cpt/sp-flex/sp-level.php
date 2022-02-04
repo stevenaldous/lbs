@@ -36,21 +36,24 @@ $sp_query = new WP_Query($args);
 if( $sp_query->have_posts() ):
 
 
+    $col = 'col';
+
+
     switch ($ln) {
         case 'Gold':
-            $col = 'col-12 col-md-6 col-lg-4 p-0';
+            //$col = 'col-6';
             $t = '';
             break;
         case 'Silver':
-            $col = 'col-6 col-md-3 col-lg-3 p-0';
+            //$col = 'col-6';
             $t = ' t-80';
             break;
         case 'Bronze':
-            $col = 'col-4 col-md-3 col-lg-2 p-0';
+            //$col = 'col-4 col-md-3 col-lg-2 p-0';
             $t = ' t-60';
             break;
         default:
-            $col = 'col-3 col-md-2 col-lg-2 p-0';
+            //$col = 'col-3 col-md-2 col-lg-2 p-0';
             $t = ' t-40';
     }
 

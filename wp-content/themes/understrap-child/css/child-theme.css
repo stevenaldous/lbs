@@ -3439,15 +3439,13 @@ input[type="button"].btn-block {
     background-color: #FFCC66;
     border: 0;
     border-radius: 1rem;
-    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     -moz-appearance: none;
          appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-moz-range-thumb {
-        -webkit-transition: none;
+        -moz-transition: none;
         transition: none; } }
     .custom-range::-moz-range-thumb:active {
       background-color: white; }
@@ -3468,14 +3466,12 @@ input[type="button"].btn-block {
     background-color: #FFCC66;
     border: 0;
     border-radius: 1rem;
-    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-ms-thumb {
-        -webkit-transition: none;
+        -ms-transition: none;
         transition: none; } }
     .custom-range::-ms-thumb:active {
       background-color: white; }
@@ -6610,7 +6606,6 @@ button.bg-dark:focus {
   position: fixed !important; }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important; }
 
 .fixed-top {
@@ -6627,9 +6622,8 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1030; }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020; } }
@@ -22086,6 +22080,63 @@ body.page-template-partners .partner-spacer:last-of-type {
 .flex-photoessay .pe-card .card-foot {
   background: #000000;
   color: #fff; }
+
+.level-gold {
+  background-color: rgba(255, 204, 102, 0.8); }
+  .level-gold .col {
+    webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+            flex: 0 0 50%;
+    max-width: 50%; }
+    @media (min-width: 992px) {
+      .level-gold .col {
+        webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3%;
+        -webkit-box-flex: 0;
+                flex: 0 0 33.3%;
+        max-width: 33.3%; } }
+
+.level-silver {
+  background-color: rgba(204, 204, 204, 0.8); }
+  .level-silver .col {
+    webkit-box-flex: 0;
+    -ms-flex: 0 0 33.3%;
+    -webkit-box-flex: 0;
+            flex: 0 0 33.3%;
+    max-width: 33.3%; }
+    @media (min-width: 992px) {
+      .level-silver .col {
+        webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        -webkit-box-flex: 0;
+                flex: 0 0 25%;
+        max-width: 25%; } }
+
+.level-bronze {
+  background-color: rgba(204, 153, 102, 0.8); }
+  .level-bronze .col {
+    webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    -webkit-box-flex: 0;
+            flex: 0 0 25%;
+    max-width: 25%; }
+    @media (min-width: 992px) {
+      .level-bronze .col {
+        webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        -webkit-box-flex: 0;
+                flex: 0 0 20%;
+        max-width: 20%; } }
+
+.level-duct-tape {
+  background-color: rgba(153, 153, 153, 0.8); }
+  .level-duct-tape .col {
+    webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    -webkit-box-flex: 0;
+            flex: 0 0 20%;
+    max-width: 20%; }
 
 .flex-pricetable .title, .flex-table .title {
   font-family: "Montserrat", sans-serif;
